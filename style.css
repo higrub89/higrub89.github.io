@@ -170,22 +170,23 @@ footer a:hover {
 
 .cta-button {
     display: inline-block;
-    color: #8B0000; /* Rojo muy sangre oscuro para el texto (Dark Red) */
+    /* Cambiamos el color inicial del texto y el borde a un dorado más oscuro/opaco o un gris muy oscuro */
+    color: #8B7A00; /* Un dorado oscuro, tipo bronce o café dorado */
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif; /* **NUEVA FUENTE: Usa la misma que los títulos** */
-    font-weight: 700; /* **NUEVO GROSOR: 700 para que se vea fuerte, pero elegante** */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 0.8em;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     padding-bottom: 5px;
-    border-bottom: 1px solid #FDF5E6; /* Blanco árabe/café pastel */
+    border-bottom: 1px solid #8B7A00; /* El mismo dorado oscuro para el borde */
     transition: color 0.4s ease, border-color 0.4s ease, transform 0.2s ease, letter-spacing 0.2s ease;
     margin-left: 40px;
 }
 
 .cta-button:hover {
-    color: #DAA520; /* Dorado para el texto al pasar el ratón */
-    border-color: #DAA520; /* Línea dorada al pasar el ratón */
+    color: #DAA520; /* Dorado brillante al pasar el ratón */
+    border-color: #DAA520; /* Línea dorada brillante al pasar el ratón */
     transform: translateX(5px);
     letter-spacing: 1.2px;
 }
