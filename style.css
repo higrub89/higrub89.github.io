@@ -1,0 +1,191 @@
+/* Importar fuentes de Google Fonts (puedes elegir otras si lo deseas) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente para el cuerpo del texto */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+    background-color: #1a1a1a; /* Fondo principal muy oscuro/antracita */
+    color: #f0f0f0; /* Color de texto principal (casi blanco) */
+}
+
+/* --- Contenedor Principal (para centrar el contenido) --- */
+/* Esto ayudará a que tu contenido no ocupe todo el ancho de la pantalla en monitores grandes */
+main {
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 40px auto; /* Aumentado el margen superior/inferior para más "aire" */
+    padding: 30px; /* Aumentado el padding interno */
+    background-color: #222222; /* Un gris ligeramente más claro para el contenido */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra un poco más pronunciada para lujo */
+}
+
+/* --- Encabezados (H1, H2, H3) --- */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* Fuente serif para títulos */
+    text-align: center;
+    margin-bottom: 25px; /* Ligeramente más espacio */
+    line-height: 1.2; /* Ajuste para títulos, si tienen varias líneas */
+}
+
+h1 {
+    font-size: 3em; /* Tamaño de la fuente para el título principal, ligeramente más grande */
+    padding: 50px 20px; /* Más padding para el H1 */
+    background-color: #000000; /* Fondo negro para el header */
+    color: #C0C0C0; /* Mantenemos el plata para el H1, que evoca elegancia y "Old Money" */
+    margin-top: 0; /* Elimina margen superior */
+    letter-spacing: 1px; /* Espaciado sutil entre letras para sofisticación */
+    text-transform: uppercase; /* Mayúsculas para un look más formal y fuerte */
+}
+
+h2, h3 {
+    color: #DAA520; /* Dorado para h2 y h3 */
+    font-weight: 700; /* Aseguramos que sean bold */
+}
+
+/* --- Navegación (Header y Nav) --- */
+header {
+    background-color: #000000; /* Fondo negro para el encabezado */
+    color: #f0f0f0;
+    padding: 1.5rem 0; /* Más padding en el header */
+    text-align: center;
+    border-bottom: 1px solid #333; /* Una línea sutil para definir el header */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    display: flex; /* Para poner los elementos en línea */
+    justify-content: center; /* Centra los elementos */
+    gap: 30px; /* Más espacio entre los elementos de la lista */
+    margin-bottom: 25px; /* Ligeramente más margen */
+}
+
+nav ul li a {
+    color: #f0f0f0; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: 600; /* Un poco más de grosor para los enlaces de navegación */
+    padding: 8px 15px; /* Más padding para los enlaces, haciéndolos más "clicables" */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición para color y fondo */
+    border-radius: 4px; /* Ligeramente redondeados */
+}
+
+nav ul li a:hover {
+    color: #FFFFFF; /* Blanco puro al pasar el ratón para un contraste nítido */
+    background-color: rgba(218, 165, 32, 0.2); /* Fondo dorado semitransparente al pasar el ratón */
+}
+
+/* --- Selector de Idioma --- */
+.language-switcher {
+    margin-top: 20px; /* Más margen superior */
+    font-size: 0.95em; /* Ligeramente más grande */
+}
+
+.language-switcher a {
+    color: #f0f0f0; /* Texto del selector de idioma en claro */
+    text-decoration: none;
+    padding: 7px 12px; /* Más padding */
+    border: 1px solid transparent; /* Borde transparente por defecto */
+    border-radius: 5px; /* Bordes ligeramente más redondeados */
+    transition: all 0.3s ease;
+}
+
+.language-switcher a.active {
+    color: #DAA520; /* Color dorado para el idioma activo */
+    border-color: #DAA520; /* Borde dorado para el idioma activo */
+    font-weight: bold;
+    background-color: rgba(218, 165, 32, 0.1); /* Fondo muy sutil para el activo */
+}
+
+.language-switcher a:hover:not(.active) {
+    background-color: #333; /* Fondo oscuro al pasar el ratón por los inactivos */
+    color: #DAA520; /* Dorado al pasar el ratón por los inactivos */
+}
+
+
+/* --- Secciones de Contenido (Sobre Mí, Proyectos, Blog) --- */
+section {
+    padding: 60px 40px; /* Más padding para las secciones */
+    margin-bottom: 40px; /* Más margen entre secciones */
+    border-bottom: 1px solid #333; /* Línea separadora sutil */
+}
+
+section:last-of-type {
+    border-bottom: none; /* Quita la línea de la última sección */
+}
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    background-color: #000000; /* Fondo negro para el footer */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 40px 20px; /* Más padding en el footer */
+    margin-top: 50px; /* Más margen superior */
+    font-size: 0.9em;
+    border-top: 1px solid #333; /* Una línea sutil para definir el footer */
+}
+
+footer p {
+    margin-bottom: 5px; /* Menos espacio entre líneas en el footer */
+}
+
+footer a {
+    color: #DAA520; /* Enlaces del footer en dorado */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600; /* Negrita para enlaces del footer */
+}
+
+footer a:hover {
+    color: #FFFFFF; /* Blanco puro al pasar el ratón en el footer */
+}
+
+/* --- Responsive básico (para pantallas más pequeñas) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em; /* Ajuste para pantallas pequeñas */
+        padding: 30px 10px;
+    }
+    main {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    section {
+        padding: 40px 20px;
+    }
+    nav ul {
+        flex-direction: column; /* Apila los elementos del menú en pantallas pequeñas */
+        gap: 10px;
+    }
+}
+
+/* --- Botón CTA (Llamada a la Acción) --- */
+.button-container {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    color: #8B0000; /* Rojo muy sangre oscuro para el texto (Dark Red) */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* **NUEVA FUENTE: Usa la misma que los títulos** */
+    font-weight: 700; /* **NUEVO GROSOR: 700 para que se vea fuerte, pero elegante** */
+    font-size: 0.8em;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FDF5E6; /* Blanco árabe/café pastel */
+    transition: color 0.4s ease, border-color 0.4s ease, transform 0.2s ease, letter-spacing 0.2s ease;
+    margin-left: 40px;
+}
+
+.cta-button:hover {
+    color: #DAA520; /* Dorado para el texto al pasar el ratón */
+    border-color: #DAA520; /* Línea dorada al pasar el ratón */
+    transform: translateX(5px);
+    letter-spacing: 1.2px;
+}
