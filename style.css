@@ -30,6 +30,18 @@ h1, h2, h3 {
     line-height: 1.2; /* Ajuste para títulos, si tienen varias líneas */
 }
 
+/* Espaciado para párrafos en el contenido principal, especialmente en historias largas */
+main p {
+    margin-bottom: 20px; /* Aumenta el espacio debajo de cada párrafo */
+    text-align: justify; /* Justifica el texto para un look más formal y pulcro */
+}
+
+/* Espaciado para el párrafo introductorio de "Sobre Mí" en la página principal */
+.intro-text {
+    margin-bottom: 25px; /* Un poco más de espacio para el párrafo de introducción */
+    text-align: center; /* Centrado para que la introducción quede bien en la página principal */
+}
+
 h1 {
     font-size: 3em; /* Tamaño de la fuente para el título principal, ligeramente más grande */
     padding: 50px 20px; /* Más padding para el H1 */
@@ -77,33 +89,49 @@ nav ul li a:hover {
     background-color: rgba(218, 165, 32, 0.2); /* Fondo dorado semitransparente al pasar el ratón */
 }
 
-/* --- Selector de Idioma --- */
 .language-switcher {
-    margin-top: 20px; /* Más margen superior */
-    font-size: 0.95em; /* Ligeramente más grande */
+    margin-top: 20px;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    display: flex; /* Usamos flexbox para asegurar el alineado y control sobre el separador */
+    justify-content: center; /* Centrar los elementos */
+    align-items: center; /* Alinear verticalmente */
 }
 
 .language-switcher a {
-    color: #f0f0f0; /* Texto del selector de idioma en claro */
+    color: #f0f0f0; /* Color inicial del texto (claro) para enlaces inactivos */
     text-decoration: none;
-    padding: 7px 12px; /* Más padding */
-    border: 1px solid transparent; /* Borde transparente por defecto */
-    border-radius: 5px; /* Bordes ligeramente más redondeados */
-    transition: all 0.3s ease;
+    padding: 7px 12px;
+    border: 1px solid transparent; /* Borde transparente por defecto para inactivos */
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    font-weight: normal; /* Aseguramos peso normal por defecto */
+    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
 }
 
 .language-switcher a.active {
-    color: #DAA520; /* Color dorado para el idioma activo */
-    border-color: #DAA520; /* Borde dorado para el idioma activo */
-    font-weight: bold;
-    background-color: rgba(218, 165, 32, 0.1); /* Fondo muy sutil para el activo */
+    color: #DAA520; /* Texto dorado para el idioma activo */
+    border-color: #DAA520; /* Borde dorado para el idioma activo (la "caja") */
+    font-weight: bold; /* Negrita para el idioma activo */
+    background-color: rgba(218, 165, 32, 0.1); /* Fondo dorado muy sutil para el activo */
+    pointer-events: none; /* Deshabilita clics y eventos de hover en el elemento activo */
+    cursor: default; /* Cambia el cursor para indicar que no es clicable */
 }
 
-.language-switcher a:hover:not(.active) {
-    background-color: #333; /* Fondo oscuro al pasar el ratón por los inactivos */
-    color: #DAA520; /* Dorado al pasar el ratón por los inactivos */
+/* Estado de HOVER para CUALQUIER enlace (activo o inactivo) */
+.language-switcher a:hover {
+    color: #FFFFFF; /* Texto blanco puro al pasar el ratón */
+    background-color: rgba(218, 165, 32, 0.3); /* Fondo dorado semitransparente un poco más visible */
+    border-color: #DAA520; /* Borde dorado al pasar el ratón */
 }
 
+/* Estilo para el separador "|" */
+.language-switcher span.separator {
+    color: #666; /* Un gris oscuro para el separador */
+    margin: 0 10px; /* Espacio alrededor del separador */
+    font-size: 1.1em; /* Un poco más grande para que sea visible */
+    user-select: none; /* Evita que se pueda seleccionar el texto del separador */
+}
 
 /* --- Secciones de Contenido (Sobre Mí, Proyectos, Blog) --- */
 section {
@@ -189,4 +217,113 @@ footer a:hover {
     border-color: #DAA520; /* Línea dorada brillante al pasar el ratón */
     transform: translateX(5px);
     letter-spacing: 1.2px;
+}
+
+/* Nuevo estilo para las miniaturas de proyectos en la página principal */
+.project-summary {
+    background-color: #2a2a2a; /* Mismo fondo que los pasos del proyecto */
+    padding: 25px;
+    border-radius: 6px;
+    margin-top: 30px; /* Espacio entre el texto intro y el primer proyecto */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Alineado a la izquierda */
+}
+
+.project-summary h3 {
+    text-align: left; /* Aseguramos que el título del proyecto esté a la izquierda */
+    font-size: 1.6em; /* Un poco más pequeño que el h3 de la página de proyecto */
+    margin-bottom: 10px;
+}
+
+.project-summary h3 a {
+    color: #DAA520; /* Color dorado para el título del proyecto en la miniatura */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-summary h3 a:hover {
+    color: #FFFFFF; /* Blanco al pasar el ratón */
+}
+
+.project-summary .project-intro {
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* --- Estilos para la Página de Detalles del Proyecto (ej. Linux Avanzado) --- */
+
+.project-detail {
+    padding: 40px; /* Más padding para la sección de detalle del proyecto */
+    background-color: #2a2a2a; /* Fondo para esta sección, similar a los project-summary */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+}
+
+.project-detail h2 {
+    font-size: 2.5em; /* Un poco más grande para el título principal del proyecto */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.project-detail h4 {
+    color: #DAA520; /* Dorado para los subtítulos dentro de la página de proyecto */
+    font-weight: 700;
+    margin-top: 35px; /* Espacio antes de cada subtítulo de paso/sección */
+    margin-bottom: 15px;
+}
+
+.project-meta {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 40px; /* Espacio después de los metadatos */
+    font-style: italic;
+}
+
+.project-detail ul {
+    list-style: disc; /* Puntos de lista */
+    margin-left: 25px; /* Indentación para las listas */
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+.project-detail ul li {
+    margin-bottom: 10px;
+}
+
+.project-step {
+    background-color: #2a2a2a; /* Fondo ligeramente más claro para cada paso individual */
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 30px; /* Espacio entre cada paso */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para cada paso */
+    text-align: justify; /* Justifica el texto dentro de los pasos */
+}
+
+.project-step h4 {
+    text-align: center; /* Centrar el título de cada paso */
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.project-screenshot {
+    max-width: 75%; /* ¡Aquí está la clave para el tamaño de la imagen! */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* La imagen ocupará su propia línea */
+    margin: 20px auto; /* Centra la imagen horizontalmente y le da margen vertical */
+    border: 1px solid #444; /* Borde sutil alrededor de la imagen */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para que se destaque */
+}
+
+.image-caption {
+    font-size: 0.85em;
+    color: #bbb; /* Gris más claro para las leyendas */
+    text-align: center;
+    margin-top: -10px; /* Ajusta el margen para acercarlo a la imagen */
+    margin-bottom: 20px;
+    font-style: italic; /* Texto de la leyenda en cursiva */
 }

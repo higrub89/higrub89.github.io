@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Transición: Mecánico a Desarrollador!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -18,10 +19,10 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div class="language-switcher">
-            <a href="index.html" class="active">Español</a> |
-            <a href="index-en.html">English</a>
-        </div>
+            <div class="language-switcher">
+                <a href="index.html" class="active">Español</a>
+                <span class="separator">|</span> <a href="index-en.html">English</a>
+            </div>
     </header>
 
     <main>
@@ -34,7 +35,14 @@
         </section>
         <section id="proyectos">
             <h2>Mis Proyectos</h2>
-            <p>Aquí destacaré los proyectos clave que desarrolle en 42 Madrid y aquellos relacionados con la industria automotriz.</p>
+            <p>Aquí destacaré los proyectos clave que desarrollé en 42 Madrid y aquellos relacionados con la industria automotriz.</p>
+
+            <div class="project-summary">
+            <h3><a href="proyectos/linux-avanzado.html">Curso: Linux Profesional Avanzado</a></h3>
+            <p class="project-intro">Documentación de los primeros pasos en Linux Avanzado: configuración e instalación de Máquinas Virtuales y Sistema operativo Ubuntu20.04.6</p>
+            <a href="proyectos/linux-avanzado.html" class="cta-button">Ver Detalles del Proyecto</a>    
+            </div>
+
         </section>
 
         <section id="blog">
@@ -43,16 +51,28 @@
         </section>
     </main>
 
-    <footer>
-        <section id="contacto">
-            <h3>Conecta Conmigo</h3>
-            <p>Puedes contactarme a través de:</p>
-            <p>Github: <a href="https://github.com/higrub89" target="_blank">https://github.com/higrub89</a></p>
-            <p>Linkedin: <a href="https://www.linkedin.com/in/higrub89/" target="_blank">https://www.linkedin.com/in/higrub89/</a></p>
-            <p>Email: <a href="mailto:higuitaruben@hotmail.com">higuitaruben@hotmail.com</a></p>
-        </section>
-        <p>&copy; 2025 Rubén Darío Higuita Rubio. Todos los derechos reservados.</p>
-    </footer>
+ <footer>
+    <section id="contacto">
+        <h3>Conecta Conmigo</h3>
+        <p>Puedes contactarme a través de:</p>
+        <p>
+            <a href="https://github.com/higrub89" target="_blank" class="contact-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/higrub89/" target="_blank" class="contact-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </p>
+        <p>
+            <a href="mailto:higuitaruben@hotmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+        </p>
+    </section>
+    <p>&copy; 2025 Rubén Darío Higuita Rubio. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>

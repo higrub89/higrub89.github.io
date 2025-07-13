@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: Linux Avanzado - Máquinas Virtuales con Ubuntu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Viaje al Código: De Mecánico a Desarrollador de Software</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html#sobre-mi">Inicio</a></li> 
+                <li><a href="../index.html#proyectos">Proyectos</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+                <a href="linux-avanzado.html" class="active">Español</a>
+                <span class="separator">|</span> <a href="linux-avanzado-en.html">English</a>
+            </div>
+    </header>
+
+    <main>
+        <section id="project-detail">
+            <h2>Proyecto: Linux Avanzado - Configuración de Máquinas Virtuales con Ubuntu</h2>
+            <h4>Objetivos de la Clase:</h4>
+            <ul>
+                <li>Comprender el concepto de virtualización.</li>
+                <li>Instalar VirtualBox y sus extensiones.</li>
+                <li>Crear una nueva máquina virtual para Ubuntu20.04.6LTS.</li>
+                <li>Configurar la red de la máquina virtual(Memoria, Disco Duro, Nucleos etc.).</li>
+                <li>Realizar la instalación básica del sistema operativo Ubuntu20.04.6.</li>
+            </ul>
+
+            <div class="project-step">
+                <h4>Paso 1: Instalación de VirtualBox</h4>
+                <p>El primer paso fue descargar e instalar Oracle VirtualBox, la herramienta que nos permitirá emular diferentes sistemas operativos. La descarga se realizó en la pagina oficial, una vez descargado se instaló y configuró para comenzar el siguiente paso que es nuestra primera maquina virtual.</p>
+                <img src="../assets/images/Creacion_MV.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+            </div>
+            <div class="project-step">
+                <h4>Paso 2: Configuración de la Maquina virtual</h4>
+                <p>Una vez dado el nombre de nuestra maquina virtual, y selecionada la ISO (imagen SO ubuntu 20.04.6), pasamos a la asignación de Hardware, como la memoria, procesadores, etc..</p>
+                <img src="../assets/images/AsignacionDeMemoria.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+            </div>
+            <div class="project-step">
+                <h4>Paso 3: Disco duro.</h4>
+                <p>En este paso seleccionamos la cantidad de disco duro que vamos asignar a nuestra máquina virtual y finalizamos la configuración.</p>
+                <img src="../assets/images/Disco_duro.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+            </div>
+            <div class="project-step">
+                <h4>Paso 4: Iniciando nuestra Máquina virtual.</h4>
+                <p>Aquí iniciamos la maquina, donde se creará y nos abrirá nuestra máquina virtual, para proceder con la instalación de nuestro sistema operativo, Ubuntu20.04.6LTS.</p>
+                <img src="../assets/images/iniciando_descargando_MV.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+            </div>
+            <div class="project-step">
+                <h4>Paso 5: Instalación y configuración de Ubuntu20.04.6</h4>
+                <p>Una vez iniciada nuestra máquina virtual, empezará el proceso de instalación del sistema operativo, una vez terminado quedará todo listo para su uso.</p>
+                <img src="../assets/images/Instalando_SO_Ubuntu.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de instalación del sistema operativo ubuntu20.04.6.LTS</p>
+            </div>
+            <p>Esta primera sesión fue fundamental para entender la base de la virtualización. Aunque la instalación de la maquina virtual fué directa, la configuración de ubuntu presentó algunos desafíos iniciales, Tuve problemas con la Terminal de linea de comandos y también con el auto-scale de la pantalla, estos desafíios me permitieron profundizar en la gestion de paquetes y configuración del CD Guest additions. Es fascinante ver cómo se puede replicar un entorno de servidor en mi propia máquina.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <section id="contacto">
+            <h3>Conecta Conmigo</h3>
+            <p>Puedes contactarme a través de:</p>
+            <p>
+                <a href="https://github.com/higrub89" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/higrub89/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+            <p>
+                <a href="mailto:higuitaruben@hotmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </p>
+        </section>
+        <p>&copy; 2025 Rubén Darío Higuita Rubio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
