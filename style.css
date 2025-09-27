@@ -48,8 +48,11 @@ h1 {
     background-color: #000000; /* Fondo negro para el header */
     color: #C0C0C0; /* Mantenemos el plata para el H1, que evoca elegancia y "Old Money" */
     margin-top: 0; /* Elimina margen superior */
-    letter-spacing: 1px; /* Espaciado sutil entre letras para sofisticación */
+    letter-spacing: 1.5px; /* Aumentado para más presencia */
     text-transform: uppercase; /* Mayúsculas para un look más formal y fuerte */
+    text-shadow: 0 0 8px rgba(218, 165, 32, 0.3); /* Resplandor dorado sutil */
+    border-bottom: 1px solid rgba(218, 165, 32, 0.5); /* Línea dorada fina */
+    transition: all 0.3s ease;
 }
 
 h2, h3 {
@@ -87,6 +90,13 @@ nav ul li a {
 nav ul li a:hover {
     color: #FFFFFF; /* Blanco puro al pasar el ratón para un contraste nítido */
     background-color: rgba(218, 165, 32, 0.2); /* Fondo dorado semitransparente al pasar el ratón */
+}
+
+/* Estilo para el enlace de la página activa en la navegación */
+nav ul li a.active {
+    color: #DAA520; /* Dorado para el enlace activo */
+    pointer-events: none; /* Deshabilita el clic en el enlace activo */
+    cursor: default;
 }
 
 .language-switcher {
@@ -135,9 +145,23 @@ nav ul li a:hover {
 
 /* --- Secciones de Contenido (Sobre Mí, Proyectos, Blog) --- */
 section {
-    padding: 60px 40px; /* Más padding para las secciones */
+    /* padding: 60px 40px; */ /* Movido al .section-box */
     margin-bottom: 40px; /* Más margen entre secciones */
     border-bottom: 1px solid #333; /* Línea separadora sutil */
+}
+
+.section-box {
+    background-color: #222222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #DAA520; /* Acento dorado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 section:last-of-type {
@@ -237,13 +261,13 @@ footer a:hover {
 }
 
 .project-summary h3 a {
-    color: #DAA520; /* Color dorado para el título del proyecto en la miniatura */
+    color: #f0f0f0; /* Título en blanco */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .project-summary h3 a:hover {
-    color: #FFFFFF; /* Blanco al pasar el ratón */
+    color: #DAA520; /* Dorado al pasar el ratón */
 }
 
 .project-summary .project-intro {
@@ -326,4 +350,63 @@ footer a:hover {
     margin-top: -10px; /* Ajusta el margen para acercarlo a la imagen */
     margin-bottom: 20px;
     font-style: italic; /* Texto de la leyenda en cursiva */
+}
+
+/* --- Estilos para la Página de Listado del Blog --- */
+.post-entry {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #DAA520; /* Acento dorado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.post-entry h3 {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.post-entry h3 a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-entry h3 a:hover {
+    color: #DAA520;
+}
+
+.post-meta {
+    font-size: 0.85em;
+    color: #bbb;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.post-meta span {
+    margin-right: 20px;
+}
+
+.post-excerpt {
+    color: #ccc;
+    text-align: left;
+    margin-bottom: 25px;
+}
+{
+    margin-right: 20px;
+}
+
+.post-excerpt {
+    color: #ccc;
+    text-align: left;
+    margin-bottom: 25px;
 }
