@@ -78,6 +78,31 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    // Scroll Animation Observer
+    const initScrollAnimations = () => {
+        const fadeElements = document.querySelectorAll('.fade-in-section');
+        
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optionally unobserve after animation to improve performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(element => observer.observe(element));
+    };
+
     loadComponent('header', 'header');
     loadComponent('footer', 'footer');
+    
+    // Initialize scroll animations
+    initScrollAnimations();
 });
