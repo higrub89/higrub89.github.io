@@ -1,101 +1,172 @@
 /* Importar fuentes de Google Fonts (puedes elegir otras si lo deseas) */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
+/* --- Variables de Diseño (Sistema "Old Money") --- */
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-card: #222222;
+    --bg-card-alt: #2a2a2a;
+    --bg-header-footer: #000000;
+    --gold: #DAA520;
+    --gold-dark: #8B7A00;
+    --gold-glow: rgba(218, 165, 32, 0.3);
+    --gold-muted: rgba(218, 165, 32, 0.5);
+    --gold-bg: rgba(218, 165, 32, 0.2);
+    --gold-bg-light: rgba(218, 165, 32, 0.1);
+    --text-main: #f0f0f0;
+    --text-secondary: #ccc;
+    --text-muted: #bbb;
+    --silver: #C0C0C0;
+    --border-color: #333;
+    --white: #FFFFFF;
+}
+
 /* --- Estilos Generales --- */
 body {
-    font-family: 'Montserrat', sans-serif; /* Fuente para el cuerpo del texto */
-    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
-    margin: 0; /* Elimina el margen predeterminado del navegador */
-    padding: 0; /* Elimina el padding predeterminado del navegador */
-    background-color: #1a1a1a; /* Fondo principal muy oscuro/antracita */
-    color: #f0f0f0; /* Color de texto principal (casi blanco) */
+    font-family: 'Montserrat', sans-serif;
+    /* Fuente para el cuerpo del texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas para mejor legibilidad */
+    margin: 0;
+    /* Elimina el margen predeterminado del navegador */
+    padding: 0;
+    /* Elimina el padding predeterminado del navegador */
+    background-color: var(--bg-dark);
+    /* Fondo principal muy oscuro/antracita */
+    color: var(--text-main);
+    /* Color de texto principal (casi blanco) */
 }
 
 /* --- Contenedor Principal (para centrar el contenido) --- */
 /* Esto ayudará a que tu contenido no ocupe todo el ancho de la pantalla en monitores grandes */
 main {
-    max-width: 960px; /* Ancho máximo del contenido */
-    margin: 40px auto; /* Aumentado el margen superior/inferior para más "aire" */
-    padding: 30px; /* Aumentado el padding interno */
-    background-color: #222222; /* Un gris ligeramente más claro para el contenido */
-    border-radius: 8px; /* Bordes ligeramente redondeados */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra un poco más pronunciada para lujo */
+    max-width: 960px;
+    /* Ancho máximo del contenido */
+    margin: 40px auto;
+    /* Aumentado el margen superior/inferior para más "aire" */
+    padding: 30px;
+    /* Aumentado el padding interno */
+    background-color: var(--bg-card);
+    /* Un gris ligeramente más claro para el contenido */
+    border-radius: 8px;
+    /* Bordes ligeramente redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* Sombra un poco más pronunciada para lujo */
 }
 
 /* --- Encabezados (H1, H2, H3) --- */
-h1, h2, h3 {
-    font-family: 'Merriweather', serif; /* Fuente serif para títulos */
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+    /* Fuente serif para títulos */
     text-align: center;
-    margin-bottom: 25px; /* Ligeramente más espacio */
-    line-height: 1.2; /* Ajuste para títulos, si tienen varias líneas */
+    margin-bottom: 25px;
+    /* Ligeramente más espacio */
+    line-height: 1.2;
+    /* Ajuste para títulos, si tienen varias líneas */
 }
 
 /* Espaciado para párrafos en el contenido principal, especialmente en historias largas */
 main p {
-    margin-bottom: 20px; /* Aumenta el espacio debajo de cada párrafo */
-    text-align: justify; /* Justifica el texto para un look más formal y pulcro */
+    margin-bottom: 20px;
+    /* Aumenta el espacio debajo de cada párrafo */
+    text-align: justify;
+    /* Justifica el texto para un look más formal y pulcro */
 }
 
 /* Espaciado para el párrafo introductorio de "Sobre Mí" en la página principal */
 .intro-text {
-    margin-bottom: 25px; /* Un poco más de espacio para el párrafo de introducción */
-    text-align: center; /* Centrado para que la introducción quede bien en la página principal */
+    margin-bottom: 25px;
+    /* Un poco más de espacio para el párrafo de introducción */
+    text-align: center;
+    /* Centrado para que la introducción quede bien en la página principal */
 }
 
 h1 {
-    font-size: 3em; /* Tamaño de la fuente para el título principal, ligeramente más grande */
-    padding: 50px 20px; /* Más padding para el H1 */
-    background-color: #000000; /* Fondo negro para el header */
-    color: #C0C0C0; /* Mantenemos el plata para el H1, que evoca elegancia y "Old Money" */
-    margin-top: 0; /* Elimina margen superior */
-    letter-spacing: 1.5px; /* Aumentado para más presencia */
-    text-transform: uppercase; /* Mayúsculas para un look más formal y fuerte */
-    text-shadow: 0 0 8px rgba(218, 165, 32, 0.3); /* Resplandor dorado sutil */
-    border-bottom: 1px solid rgba(218, 165, 32, 0.5); /* Línea dorada fina */
+    font-size: 3em;
+    /* Tamaño de la fuente para el título principal, ligeramente más grande */
+    padding: 50px 20px;
+    /* Más padding para el H1 */
+    background-color: var(--bg-header-footer);
+    /* Fondo negro para el header */
+    color: var(--silver);
+    /* Mantenemos el plata para el H1, que evoca elegancia y "Old Money" */
+    margin-top: 0;
+    /* Elimina margen superior */
+    letter-spacing: 1.5px;
+    /* Aumentado para más presencia */
+    text-transform: uppercase;
+    /* Mayúsculas para un look más formal y fuerte */
+    text-shadow: 0 0 8px var(--gold-glow);
+    /* Resplandor dorado sutil */
+    border-bottom: 1px solid var(--gold-muted);
+    /* Línea dorada fina */
     transition: all 0.3s ease;
 }
 
-h2, h3 {
-    color: #DAA520; /* Dorado para h2 y h3 */
-    font-weight: 700; /* Aseguramos que sean bold */
+h2,
+h3 {
+    color: var(--gold);
+    /* Dorado para h2 y h3 */
+    font-weight: 700;
+    /* Aseguramos que sean bold */
 }
 
 /* --- Navegación (Header y Nav) --- */
 header {
-    background-color: #000000; /* Fondo negro para el encabezado */
-    color: #f0f0f0;
-    padding: 1.5rem 0; /* Más padding en el header */
+    background-color: var(--bg-header-footer);
+    /* Fondo negro para el encabezado */
+    color: var(--text-main);
+    padding: 1.5rem 0;
+    /* Más padding en el header */
     text-align: center;
-    border-bottom: 1px solid #333; /* Una línea sutil para definir el header */
+    border-bottom: 1px solid var(--border-color);
+    /* Una línea sutil para definir el header */
 }
 
 nav ul {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none;
+    /* Quita los puntos de la lista */
     padding: 0;
-    display: flex; /* Para poner los elementos en línea */
-    justify-content: center; /* Centra los elementos */
-    gap: 30px; /* Más espacio entre los elementos de la lista */
-    margin-bottom: 25px; /* Ligeramente más margen */
+    display: flex;
+    /* Para poner los elementos en línea */
+    justify-content: center;
+    /* Centra los elementos */
+    gap: 30px;
+    /* Más espacio entre los elementos de la lista */
+    margin-bottom: 25px;
+    /* Ligeramente más margen */
 }
 
 nav ul li a {
-    color: #f0f0f0; /* Color del texto de los enlaces */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-    font-weight: 600; /* Un poco más de grosor para los enlaces de navegación */
-    padding: 8px 15px; /* Más padding para los enlaces, haciéndolos más "clicables" */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transición para color y fondo */
-    border-radius: 4px; /* Ligeramente redondeados */
+    color: var(--text-main);
+    /* Color del texto de los enlaces */
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces */
+    font-weight: 600;
+    /* Un poco más de grosor para los enlaces de navegación */
+    padding: 8px 15px;
+    /* Más padding para los enlaces, haciéndolos más "clicables" */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Transición para color y fondo */
+    border-radius: 4px;
+    /* Ligeramente redondeados */
 }
 
 nav ul li a:hover {
-    color: #FFFFFF; /* Blanco puro al pasar el ratón para un contraste nítido */
-    background-color: rgba(218, 165, 32, 0.2); /* Fondo dorado semitransparente al pasar el ratón */
+    color: var(--white);
+    /* Blanco puro al pasar el ratón para un contraste nítido */
+    background-color: var(--gold-bg);
+    /* Fondo dorado semitransparente al pasar el ratón */
 }
 
 /* Estilo para el enlace de la página activa en la navegación */
 nav ul li a.active {
-    color: #DAA520; /* Dorado para el enlace activo */
-    pointer-events: none; /* Deshabilita el clic en el enlace activo */
+    color: var(--gold);
+    /* Dorado para el enlace activo */
+    pointer-events: none;
+    /* Deshabilita el clic en el enlace activo */
     cursor: default;
 }
 
@@ -103,59 +174,84 @@ nav ul li a.active {
     margin-top: 20px;
     font-size: 0.95em;
     letter-spacing: 0.5px;
-    display: flex; /* Usamos flexbox para asegurar el alineado y control sobre el separador */
-    justify-content: center; /* Centrar los elementos */
-    align-items: center; /* Alinear verticalmente */
+    display: flex;
+    /* Usamos flexbox para asegurar el alineado y control sobre el separador */
+    justify-content: center;
+    /* Centrar los elementos */
+    align-items: center;
+    /* Alinear verticalmente */
 }
 
 .language-switcher a {
-    color: #f0f0f0; /* Color inicial del texto (claro) para enlaces inactivos */
+    color: #f0f0f0;
+    /* Color inicial del texto (claro) para enlaces inactivos */
     text-decoration: none;
     padding: 7px 12px;
-    border: 1px solid transparent; /* Borde transparente por defecto para inactivos */
+    border: 1px solid transparent;
+    /* Borde transparente por defecto para inactivos */
     border-radius: 5px;
-    transition: all 0.3s ease; /* Transición suave para todos los cambios */
-    font-weight: normal; /* Aseguramos peso normal por defecto */
-    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+    transition: all 0.3s ease;
+    /* Transición suave para todos los cambios */
+    font-weight: normal;
+    /* Aseguramos peso normal por defecto */
+    white-space: nowrap;
+    /* Evita que el texto del botón se rompa en varias líneas */
 }
 
 .language-switcher a.active {
-    color: #DAA520; /* Texto dorado para el idioma activo */
-    border-color: #DAA520; /* Borde dorado para el idioma activo (la "caja") */
-    font-weight: bold; /* Negrita para el idioma activo */
-    background-color: rgba(218, 165, 32, 0.1); /* Fondo dorado muy sutil para el activo */
-    pointer-events: none; /* Deshabilita clics y eventos de hover en el elemento activo */
-    cursor: default; /* Cambia el cursor para indicar que no es clicable */
+    color: #DAA520;
+    /* Texto dorado para el idioma activo */
+    border-color: #DAA520;
+    /* Borde dorado para el idioma activo (la "caja") */
+    font-weight: bold;
+    /* Negrita para el idioma activo */
+    background-color: rgba(218, 165, 32, 0.1);
+    /* Fondo dorado muy sutil para el activo */
+    pointer-events: none;
+    /* Deshabilita clics y eventos de hover en el elemento activo */
+    cursor: default;
+    /* Cambia el cursor para indicar que no es clicable */
 }
 
 /* Estado de HOVER para CUALQUIER enlace (activo o inactivo) */
 .language-switcher a:hover {
-    color: #FFFFFF; /* Texto blanco puro al pasar el ratón */
-    background-color: rgba(218, 165, 32, 0.3); /* Fondo dorado semitransparente un poco más visible */
-    border-color: #DAA520; /* Borde dorado al pasar el ratón */
+    color: var(--white);
+    /* Texto blanco puro al pasar el ratón */
+    background-color: var(--gold-glow);
+    /* Fondo dorado semitransparente un poco más visible */
+    border-color: var(--gold);
+    /* Borde dorado al pasar el ratón */
 }
 
 /* Estilo para el separador "|" */
 .language-switcher span.separator {
-    color: #666; /* Un gris oscuro para el separador */
-    margin: 0 10px; /* Espacio alrededor del separador */
-    font-size: 1.1em; /* Un poco más grande para que sea visible */
-    user-select: none; /* Evita que se pueda seleccionar el texto del separador */
+    color: #666;
+    /* Un gris oscuro para el separador */
+    margin: 0 10px;
+    /* Espacio alrededor del separador */
+    font-size: 1.1em;
+    /* Un poco más grande para que sea visible */
+    user-select: none;
+    /* Evita que se pueda seleccionar el texto del separador */
 }
 
 /* --- Secciones de Contenido (Sobre Mí, Proyectos, Blog) --- */
 section {
-    /* padding: 60px 40px; */ /* Movido al .section-box */
-    margin-bottom: 40px; /* Más margen entre secciones */
-    border-bottom: 1px solid #333; /* Línea separadora sutil */
+    /* padding: 60px 40px; */
+    /* Movido al .section-box */
+    margin-bottom: 40px;
+    /* Más margen entre secciones */
+    border-bottom: 1px solid #333;
+    /* Línea separadora sutil */
 }
 
 .section-box {
-    background-color: #222222;
+    background-color: var(--bg-card);
     padding: 50px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border-left: 3px solid #DAA520; /* Acento dorado */
+    border-left: 3px solid var(--gold);
+    /* Acento dorado */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -165,50 +261,64 @@ section {
 }
 
 section:last-of-type {
-    border-bottom: none; /* Quita la línea de la última sección */
+    border-bottom: none;
+    /* Quita la línea de la última sección */
 }
 
 /* --- Pie de Página (Footer) --- */
 footer {
-    background-color: #000000; /* Fondo negro para el footer */
-    color: #f0f0f0;
+    background-color: var(--bg-header-footer);
+    /* Fondo negro para el footer */
+    color: var(--text-main);
     text-align: center;
-    padding: 40px 20px; /* Más padding en el footer */
-    margin-top: 50px; /* Más margen superior */
+    padding: 40px 20px;
+    /* Más padding en el footer */
+    margin-top: 50px;
+    /* Más margen superior */
     font-size: 0.9em;
-    border-top: 1px solid #333; /* Una línea sutil para definir el footer */
+    border-top: 1px solid var(--border-color);
+    /* Una línea sutil para definir el footer */
 }
 
 footer p {
-    margin-bottom: 5px; /* Menos espacio entre líneas en el footer */
+    margin-bottom: 5px;
+    /* Menos espacio entre líneas en el footer */
 }
 
 footer a {
-    color: #DAA520; /* Enlaces del footer en dorado */
+    color: var(--gold);
+    /* Enlaces del footer en dorado */
     text-decoration: none;
     transition: color 0.3s ease;
-    font-weight: 600; /* Negrita para enlaces del footer */
+    font-weight: 600;
+    /* Negrita para enlaces del footer */
 }
 
 footer a:hover {
-    color: #FFFFFF; /* Blanco puro al pasar el ratón en el footer */
+    color: var(--white);
+    /* Blanco puro al pasar el ratón en el footer */
 }
 
 /* --- Responsive básico (para pantallas más pequeñas) --- */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.2em; /* Ajuste para pantallas pequeñas */
+        font-size: 2.2em;
+        /* Ajuste para pantallas pequeñas */
         padding: 30px 10px;
     }
+
     main {
         margin: 20px 10px;
         padding: 15px;
     }
+
     section {
         padding: 40px 20px;
     }
+
     nav ul {
-        flex-direction: column; /* Apila los elementos del menú en pantallas pequeñas */
+        flex-direction: column;
+        /* Apila los elementos del menú en pantallas pequeñas */
         gap: 10px;
     }
 }
@@ -223,7 +333,8 @@ footer a:hover {
 .cta-button {
     display: inline-block;
     /* Cambiamos el color inicial del texto y el borde a un dorado más oscuro/opaco o un gris muy oscuro */
-    color: #8B7A00; /* Un dorado oscuro, tipo bronce o café dorado */
+    color: var(--gold-dark);
+    /* Un dorado oscuro, tipo bronce o café dorado */
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -231,87 +342,105 @@ footer a:hover {
     letter-spacing: 0.8px;
     text-transform: uppercase;
     padding-bottom: 5px;
-    border-bottom: 1px solid #8B7A00; /* El mismo dorado oscuro para el borde */
+    border-bottom: 1px solid var(--gold-dark);
+    /* El mismo dorado oscuro para el borde */
     transition: color 0.4s ease, border-color 0.4s ease, transform 0.2s ease, letter-spacing 0.2s ease;
     margin-left: 40px;
 }
 
 .cta-button:hover {
-    color: #DAA520; /* Dorado brillante al pasar el ratón */
-    border-color: #DAA520; /* Línea dorada brillante al pasar el ratón */
+    color: var(--gold);
+    /* Dorado brillante al pasar el ratón */
+    border-color: var(--gold);
+    /* Línea dorada brillante al pasar el ratón */
     transform: translateX(5px);
     letter-spacing: 1.2px;
 }
 
 /* Nuevo estilo para las miniaturas de proyectos en la página principal */
 .project-summary {
-    background-color: #2a2a2a; /* Mismo fondo que los pasos del proyecto */
+    background-color: var(--bg-card-alt);
+    /* Mismo fondo que los pasos del proyecto */
     padding: 25px;
     border-radius: 6px;
-    margin-top: 30px; /* Espacio entre el texto intro y el primer proyecto */
+    margin-top: 30px;
+    /* Espacio entre el texto intro y el primer proyecto */
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: left; /* Alineado a la izquierda */
+    text-align: left;
+    /* Alineado a la izquierda */
 }
 
 .project-summary h3 {
-    text-align: left; /* Aseguramos que el título del proyecto esté a la izquierda */
-    font-size: 1.6em; /* Un poco más pequeño que el h3 de la página de proyecto */
+    text-align: left;
+    /* Aseguramos que el título del proyecto esté a la izquierda */
+    font-size: 1.6em;
+    /* Un poco más pequeño que el h3 de la página de proyecto */
     margin-bottom: 10px;
 }
 
 .project-summary h3 a {
-    color: #f0f0f0; /* Título en blanco */
+    color: var(--text-main);
+    /* Título en blanco */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .project-summary h3 a:hover {
-    color: #DAA520; /* Dorado al pasar el ratón */
+    color: var(--gold);
+    /* Dorado al pasar el ratón */
 }
 
 .project-summary .project-intro {
     font-size: 0.95em;
-    color: #ccc;
+    color: var(--text-secondary);
     margin-bottom: 20px;
 }
 
 /* --- Estilos para la Página de Detalles del Proyecto (ej. Linux Avanzado) --- */
 
 .project-detail {
-    padding: 40px; /* Más padding para la sección de detalle del proyecto */
-    background-color: #2a2a2a; /* Fondo para esta sección, similar a los project-summary */
+    padding: 40px;
+    /* Más padding para la sección de detalle del proyecto */
+    background-color: var(--bg-card-alt);
+    /* Fondo para esta sección, similar a los project-summary */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 50px;
 }
 
 .project-detail h2 {
-    font-size: 2.5em; /* Un poco más grande para el título principal del proyecto */
+    font-size: 2.5em;
+    /* Un poco más grande para el título principal del proyecto */
     margin-bottom: 25px;
     text-align: center;
 }
 
 .project-detail h4 {
-    color: #DAA520; /* Dorado para los subtítulos dentro de la página de proyecto */
+    color: var(--gold);
+    /* Dorado para los subtítulos dentro de la página de proyecto */
     font-weight: 700;
-    margin-top: 35px; /* Espacio antes de cada subtítulo de paso/sección */
+    margin-top: 35px;
+    /* Espacio antes de cada subtítulo de paso/sección */
     margin-bottom: 15px;
 }
 
 .project-meta {
     font-size: 0.9em;
-    color: #bbb;
+    color: var(--text-muted);
     text-align: center;
-    margin-bottom: 40px; /* Espacio después de los metadatos */
+    margin-bottom: 40px;
+    /* Espacio después de los metadatos */
     font-style: italic;
 }
 
 .project-detail ul {
-    list-style: disc; /* Puntos de lista */
-    margin-left: 25px; /* Indentación para las listas */
+    list-style: disc;
+    /* Puntos de lista */
+    margin-left: 25px;
+    /* Indentación para las listas */
     margin-bottom: 25px;
-    color: #f0f0f0;
+    color: var(--text-main);
 }
 
 .project-detail ul li {
@@ -319,47 +448,63 @@ footer a:hover {
 }
 
 .project-step {
-    background-color: #2a2a2a; /* Fondo ligeramente más claro para cada paso individual */
+    background-color: var(--bg-card-alt);
+    /* Fondo ligeramente más claro para cada paso individual */
     padding: 25px;
     border-radius: 6px;
-    margin-bottom: 30px; /* Espacio entre cada paso */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para cada paso */
-    text-align: justify; /* Justifica el texto dentro de los pasos */
+    margin-bottom: 30px;
+    /* Espacio entre cada paso */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra sutil para cada paso */
+    text-align: justify;
+    /* Justifica el texto dentro de los pasos */
 }
 
 .project-step h4 {
-    text-align: center; /* Centrar el título de cada paso */
+    text-align: center;
+    /* Centrar el título de cada paso */
     font-size: 1.4em;
     margin-bottom: 20px;
 }
 
 .project-screenshot {
-    max-width: 75%; /* ¡Aquí está la clave para el tamaño de la imagen! */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* La imagen ocupará su propia línea */
-    margin: 20px auto; /* Centra la imagen horizontalmente y le da margen vertical */
-    border: 1px solid #444; /* Borde sutil alrededor de la imagen */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para que se destaque */
+    max-width: 75%;
+    /* ¡Aquí está la clave para el tamaño de la imagen! */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* La imagen ocupará su propia línea */
+    margin: 20px auto;
+    /* Centra la imagen horizontalmente y le da margen vertical */
+    border: 1px solid #444;
+    /* Borde sutil alrededor de la imagen */
+    border-radius: 4px;
+    /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra suave para que se destaque */
 }
 
 .image-caption {
     font-size: 0.85em;
-    color: #bbb; /* Gris más claro para las leyendas */
+    color: var(--text-muted);
+    /* Gris más claro para las leyendas */
     text-align: center;
-    margin-top: -10px; /* Ajusta el margen para acercarlo a la imagen */
+    margin-top: -10px;
+    /* Ajusta el margen para acercarlo a la imagen */
     margin-bottom: 20px;
-    font-style: italic; /* Texto de la leyenda en cursiva */
+    font-style: italic;
+    /* Texto de la leyenda en cursiva */
 }
 
 /* --- Estilos para la Página de Listado del Blog --- */
 .post-entry {
-    background-color: #2a2a2a;
+    background-color: var(--bg-card-alt);
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    border-left: 3px solid #DAA520; /* Acento dorado */
+    border-left: 3px solid var(--gold);
+    /* Acento dorado */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -375,18 +520,18 @@ footer a:hover {
 }
 
 .post-entry h3 a {
-    color: #f0f0f0;
+    color: var(--text-main);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .post-entry h3 a:hover {
-    color: #DAA520;
+    color: var(--gold);
 }
 
 .post-meta {
     font-size: 0.85em;
-    color: #bbb;
+    color: var(--text-muted);
     font-style: italic;
     margin-bottom: 15px;
     text-align: left;
@@ -397,16 +542,7 @@ footer a:hover {
 }
 
 .post-excerpt {
-    color: #ccc;
-    text-align: left;
-    margin-bottom: 25px;
-}
-{
-    margin-right: 20px;
-}
-
-.post-excerpt {
-    color: #ccc;
+    color: var(--text-secondary);
     text-align: left;
     margin-bottom: 25px;
 }

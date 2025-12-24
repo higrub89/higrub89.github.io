@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURSO: Linux Profesional Avanzado - Máquinas Virtuales con Ubuntu</title>
+    <title>Curso: Linux Profesional Avanzado - Virtualización con Ubuntu</title>
+    <meta name="description"
+        content="Documentación técnica sobre la instalación y configuración de máquinas virtuales con Ubuntu 20.04 en VirtualBox. Objetivos de aprendizaje y pasos detallados.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Curso: Linux Profesional Avanzado - Rubén Darío Higuita Rubio">
+    <meta property="og:description"
+        content="Guía paso a paso sobre virtualización, instalación de Ubuntu Server y configuración de red.">
+
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body data-path-prefix="..">
 
     <header>
@@ -27,35 +37,59 @@
 
             <div class="project-step">
                 <h4>Paso 1: Instalación de VirtualBox</h4>
-                <p>El primer paso fue descargar e instalar Oracle VirtualBox, la herramienta que nos permitirá emular diferentes sistemas operativos. La descarga se realizó en la pagina oficial, una vez descargado se instaló y configuró para comenzar el siguiente paso que es nuestra primera maquina virtual.</p>
-                <img src="../assets/images/Creacion_MV.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
-                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+                <p>El primer paso fue descargar e instalar Oracle VirtualBox, la herramienta que nos permitirá emular
+                    diferentes sistemas operativos. La descarga se realizó en la pagina oficial, una vez descargado se
+                    instaló y configuró para comenzar el siguiente paso que es nuestra primera maquina virtual.</p>
+                <img src="../assets/images/Creacion_MV.png"
+                    alt="Pantalla de inicio de VirtualBox mostrando la creación de una nueva máquina virtual con nombre y tipo de SO"
+                    class="project-screenshot">
+                <p class="image-caption">Captura: Proceso de selección de ISO y nombre de la máquina virtual en
+                    VirtualBox.</p>
             </div>
             <div class="project-step">
                 <h4>Paso 2: Configuración de la Maquina virtual</h4>
-                <p>Una vez dado el nombre de nuestra maquina virtual, y selecionada la ISO (imagen SO ubuntu 20.04.6), pasamos a la asignación de Hardware, como la memoria, procesadores, etc..</p>
-                <img src="../assets/images/AsignacionDeMemoria.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
-                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+                <p>Una vez dado el nombre de nuestra maquina virtual, y selecionada la ISO (imagen SO ubuntu 20.04.6),
+                    pasamos a la asignación de Hardware, como la memoria, procesadores, etc..</p>
+                <img src="../assets/images/AsignacionDeMemoria.png"
+                    alt="Configuración de hardware en VirtualBox indicando la asignación de memoria RAM y núcleos de CPU"
+                    class="project-screenshot">
+                <p class="image-caption">Captura: Asignación de recursos de hardware (RAM y procesadores) para la VM.
+                </p>
             </div>
             <div class="project-step">
                 <h4>Paso 3: Disco duro.</h4>
-                <p>En este paso seleccionamos la cantidad de disco duro que vamos asignar a nuestra máquina virtual y finalizamos la configuración.</p>
-                <img src="../assets/images/Disco_duro.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
-                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+                <p>En este paso seleccionamos la cantidad de disco duro que vamos asignar a nuestra máquina virtual y
+                    finalizamos la configuración.</p>
+                <img src="../assets/images/Disco_duro.png"
+                    alt="Interfaz de VirtualBox para la creación de un disco duro virtual con tamaño dinámico"
+                    class="project-screenshot">
+                <p class="image-caption">Captura: Definición del tamaño y tipo de disco duro virtual.</p>
             </div>
             <div class="project-step">
                 <h4>Paso 4: Iniciando nuestra Máquina virtual.</h4>
-                <p>Aquí iniciamos la maquina, donde se creará y nos abrirá nuestra máquina virtual, para proceder con la instalación de nuestro sistema operativo, Ubuntu20.04.6LTS.</p>
-                <img src="../assets/images/iniciando_descargando_MV.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
-                <p class="image-caption">Captura: Proceso de instalación de VirtualBox en mi sistema anfitrión.</p>
+                <p>Aquí iniciamos la maquina, donde se creará y nos abrirá nuestra máquina virtual, para proceder con la
+                    instalación de nuestro sistema operativo, Ubuntu20.04.6LTS.</p>
+                <img src="../assets/images/iniciando_descargando_MV.png"
+                    alt="Ventana de ejecución de VirtualBox iniciando la carga de la ISO de Ubuntu"
+                    class="project-screenshot">
+                <p class="image-caption">Captura: Primer arranque de la máquina virtual e inicio del instalador de
+                    Ubuntu.</p>
             </div>
             <div class="project-step">
                 <h4>Paso 5: Instalación y configuración de Ubuntu20.04.6</h4>
-                <p>Una vez iniciada nuestra máquina virtual, empezará el proceso de instalación del sistema operativo, una vez terminado quedará todo listo para su uso.</p>
-                <img src="../assets/images/Instalando_SO_Ubuntu.png" alt="Captura de pantalla de la instalación de VirtualBox" class="project-screenshot">
-                <p class="image-caption">Captura: Proceso de instalación del sistema operativo ubuntu20.04.6.LTS</p>
+                <p>Una vez iniciada nuestra máquina virtual, empezará el proceso de instalación del sistema operativo,
+                    una vez terminado quedará todo listo para su uso.</p>
+                <img src="../assets/images/Instalando_SO_Ubuntu.png"
+                    alt="Pantalla del proceso de instalación de Ubuntu Server mostrando el progreso de copia de archivos"
+                    class="project-screenshot">
+                <p class="image-caption">Captura: Instalación del sistema operativo Ubuntu 20.04.6 LTS en progreso.</p>
             </div>
-            <p>Esta primera sesión fue fundamental para entender la base de la virtualización. Aunque la instalación de la maquina virtual fué directa, la configuración de ubuntu presentó algunos desafíos iniciales, Tuve problemas con la Terminal de linea de comandos y también con el auto-scale de la pantalla, estos desafíios me permitieron profundizar en la gestion de paquetes y configuración del CD Guest additions. Es fascinante ver cómo se puede replicar un entorno de servidor en mi propia máquina.</p>
+
+            <p>Esta primera sesión fue fundamental para entender la base de la virtualización. Aunque la instalación de
+                la maquina virtual fué directa, la configuración de ubuntu presentó algunos desafíos iniciales, Tuve
+                problemas con la Terminal de linea de comandos y también con el auto-scale de la pantalla, estos
+                desafíios me permitieron profundizar en la gestion de paquetes y configuración del CD Guest additions.
+                Es fascinante ver cómo se puede replicar un entorno de servidor en mi propia máquina.</p>
 
         </section>
     </main>
@@ -67,4 +101,5 @@
     <script src="../js/main.js"></script>
 
 </body>
+
 </html>
