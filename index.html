@@ -1,90 +1,365 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Transición: Mecánico a Desarrollador!</title>
-    <meta name="description"
-        content="Portfolio personal de Rubén Darío Higuita Rubio. Mi transición profesional de la mecánica de alta gama al desarrollo de software en 42 Madrid.">
+    <title>Rubén Darío Higuita | Systems Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --surface-color: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-glow: rgba(88, 166, 255, 0.2);
+            --success: #3fb950;
+            --warning: #d29922;
+        }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://higrub89.github.io/">
-    <meta property="og:title" content="Rubén Darío Higuita Rubio - De Mecánico a Desarrollador">
-    <meta property="og:description"
-        content="Descubre mi historia de transición profesional y mis proyectos en el mundo del desarrollo de software.">
-    <meta property="og:image" content="https://higrub89.github.io/assets/images/og-image.png">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://higrub89.github.io/">
-    <meta property="twitter:title" content="Rubén Darío Higuita Rubio - De Mecánico a Desarrollador">
-    <meta property="twitter:description"
-        content="Descubre mi historia de transición profesional y mis proyectos en el mundo del desarrollo de software.">
-    <meta property="twitter:image" content="https://higrub89.github.io/assets/images/og-image.png">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        /* HEADER */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .title-group h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .title-group h2 {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        /* TERMINAL INTRO */
+        .terminal {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 40px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        .prompt { color: var(--success); }
+        .command { color: #ffffff; }
+        .output { color: var(--text-muted); margin-top: 10px; line-height: 1.8; }
+
+        /* SECTION STYLES */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        section h3 i {
+            color: var(--accent-color);
+        }
+
+        /* PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 25px;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .project-header h4 {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .project-header .links a {
+            color: var(--text-muted);
+            margin-left: 10px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-header .links a:hover {
+            color: var(--accent-color);
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        /* CONSTITUTION (Core Values) */
+        .constitution-list {
+            list-style: none;
+        }
+
+        .constitution-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .constitution-list li::before {
+            content: ">>";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-family: 'Fira Code', monospace;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-    <header>
-        <!-- El contenido del header se cargará aquí por JavaScript -->
-    </header>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="title-group">
+                <h1>Rubén Darío Higuita</h1>
+                <h2>Systems Software Engineer | Automotive Technologist</h2>
+            </div>
+            <div class="contact-info">
+                <a href="https://github.com/higrub89" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/higrub89" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tu-email@ejemplo.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
 
-    <main>
-        <section id="sobre-mi" class="fade-in-section">
-            <div class="section-box">
-                <h2>Sobre Mí: Mi Historia de Transición</h2>
-                <p class="intro-text">Con una sólida trayectoria en el sector automotriz de alta gama, he cultivado una
-                    meticulosa atención al detalle y una profunda comprensión de sistemas complejos. Impulsado por la
-                    vanguardia tecnológica, ahora fusiono mi pasión por la ingeniería de precisión con el poder del
-                    código, preparándome en 42 Madrid para innovar en la automoción del futuro.</p>
-                <div class="button-container">
-                    <a href="about-me.html" class="cta-button">Leer Mi Historia Completa</a>
+        <!-- TERMINAL INTRO -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dot dot-red"></div>
+                <div class="terminal-dot dot-yellow"></div>
+                <div class="terminal-dot dot-green"></div>
+            </div>
+            <div>
+                <span class="prompt">rhiguita@42madrid:~$</span> <span class="command">cat whoami.txt</span>
+            </div>
+            <div class="output">
+                De la mecánica de alta gama a la ingeniería de sistemas <i>low-level</i>.<br><br>
+                Acostumbrado a diagnosticar motores complejos con precisión quirúrgica, ahora aplico esa misma mentalidad defensiva y orientada al detalle para escribir software crítico. Me especializo en <b>C/C++</b>, programación de sistemas POSIX, gestión determinista de memoria, concurrencia y redes en <b>42 School Madrid</b>.<br><br>
+                Mi objetivo es fusionar la robustez de la automoción clásica con el software de alto rendimiento del futuro (CAN-FD, Gateways, RTOS).
+            </div>
+        </div>
+
+        <!-- CONSTITUTION -->
+        <section>
+            <h3><i class="fas fa-scroll"></i> Global Engineering Constitution</h3>
+            <ul class="constitution-list">
+                <li><span class="highlight">Zero Leaks Policy:</span> Gestión de memoria absoluta. Todo recurso reservado en el <i>heap</i> o file descriptor abierto debe ser cerrado de forma determinista. Código 100% verificado con Valgrind/ASan.</li>
+                <li><span class="highlight">Defensive C/C++:</span> Compilación estricta (<code style="color:var(--warning)">-Wall -Wextra -Werror</code>). Arquitecturas modulares (SoC) preparadas para fallar de forma controlada en *edge cases*.</li>
+                <li><span class="highlight">Infrastructure as Code:</span> Makefiles robustos sin relinkeos. CI/CD automatizado vía GitHub Actions para asegurar compilación e integridad del código en cada commit.</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h3><i class="fas fa-code-branch"></i> Elite Engineering Projects</h3>
+            <div class="projects-grid">
+                
+                <!-- Webserv -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Webserv</h4>
+                        <div class="links">
+                            <a href="https://github.com/higrub89/webserv" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        Servidor HTTP no bloqueante desde cero compatible con POSIX.1-2017. Implementa multiplexación I/O avanzada (<code style="color:var(--warning)">epoll/select</code>), parseo de requests HTTP/1.1 y manejo de sockets sin depender de librerías externas.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C++98</span>
+                        <span class="tech-tag">Sockets</span>
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">epoll</span>
+                    </div>
                 </div>
+
+                <!-- Minishell -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Minishell</h4>
+                        <div class="links">
+                            <a href="https://github.com/higrub89/minishell" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        Un intérprete de comandos UNIX completamente funcional. Parseo de sintaxis mediante Abstract Syntax Trees (AST), gestión de pipes concurrentes, redirecciones heredoc y manejo exhaustivo de señales y subprocesos.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">POSIX</span>
+                        <span class="tech-tag">AST Parsing</span>
+                        <span class="tech-tag">IPC Pipes</span>
+                    </div>
+                </div>
+
+                <!-- Automotive CAN Bus -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Automotive CAN-FD Gateway</h4>
+                        <div class="links">
+                            <a href="https://github.com/higrub89/canfd-gateway-h7" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        Arquitectura de software para simulación e interacción con el Bus CAN/CAN-FD de automoción. Enfoque en sistemas deterministas y alto rendimiento para redes vehiculares.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">C/C++</span>
+                        <span class="tech-tag">CAN Bus</span>
+                    </div>
+                </div>
+
+                <!-- Philosophers -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Philosophers</h4>
+                        <div class="links">
+                            <a href="https://github.com/higrub89/philosophers" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        Simulación de concurrencia dura (Problema de la cena de los filósofos). Implementación de hilos (POSIX threads) y sincronización con mutexes para asegurar la ausencia de <i>Data Races</i> y <i>Deadlocks</i>.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Pthreads</span>
+                        <span class="tech-tag">Concurrency</span>
+                        <span class="tech-tag">Mutexes</span>
+                    </div>
+                </div>
+
             </div>
         </section>
-        <section id="proyectos" class="fade-in-section">
-            <div class="section-box">
-                <h2>Mis Proyectos</h2>
-                <p>Aquí destacaré los proyectos clave que desarrollé en 42 Madrid y aquellos relacionados con la
-                    industria automotriz.</p>
 
-                <div class="project-summary">
-                    <h3><a href="proyectos/linux-avanzado.html">Curso: Linux Profesional Avanzado</a></h3>
-                    <p class="project-intro">Documentación de los primeros pasos en Linux Avanzado: configuración e
-                        instalación de Máquinas Virtuales y Sistema operativo Ubuntu20.04.6</p>
-                    <a href="proyectos/linux-avanzado.html" class="cta-button">Ver Detalles del Proyecto</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="fade-in-section">
-            <div class="section-box">
-                <h2>Diario de Aprendizaje y Reflexiones</h2>
-                <p>Un espacio para documentar mi transición al mundo del desarrollo de software, compartiendo
-                    aprendizajes, desafíos y la filosofía que impulsa cada línea de código que escribo.</p>
-                <div class="button-container">
-                    <a href="blog.html" class="cta-button">Visitar Mi Blog</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- El contenido del footer se cargará aquí por JavaScript -->
-    </footer>
-
-    <script src="js/main.js"></script>
+        <!-- FOOTER -->
+        <footer style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
+            <p>Diseñado bajo los principios de la Antigravity Global Engineering Constitution.</p>
+        </footer>
+    </div>
 
 </body>
-
 </html>
