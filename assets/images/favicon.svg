@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#070807"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#c5a880" stroke-width="1.5" stroke-opacity="0.6"/>
+  <!-- Microchip terminal accents -->
+  <path d="M8 20h4M8 32h4M8 44h4M52 20h4M52 32h4M52 44h4M20 8v4M32 8v4M44 8v4M20 52v4M32 52v4M44 52v4" stroke="#c5a880" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.4"/>
+  <!-- Monogram RH -->
+  <text x="32" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Cinzel', 'Times New Roman', serif" font-size="24" font-weight="700" fill="#c5a880" text-anchor="middle" letter-spacing="1.5">RH</text>
+</svg>
