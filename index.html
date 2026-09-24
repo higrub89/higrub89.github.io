@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubén Darío Higuita | Elite Systems Engineering</title>
+    <title>Rubén Darío Higuita | Systems Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Palette: Stealth & Luxury */
-            --bg-base: #070807; /* Vantablack/Tactical Dark */
-            --bg-surface: #101210; /* Gunmetal surface */
-            --text-primary: #f0f2f0; /* Crisp Titanium White */
-            --text-secondary: #8c938c; /* Muted Military Grey */
             
-            /* The Luxury Defense Accents */
-            --accent-gold: #c5a880; /* Champagne Gold / Brass */
-            --accent-olive: #242c22; /* Deep Military Olive */
-            --border-refined: rgba(197, 168, 128, 0.2); /* Subtle Gold Border */
+            --bg-base: #070807; 
+            --bg-surface: #101210; 
+            --text-primary: #f0f2f0; 
+            --text-secondary: #8c938c; 
+            
+            
+            --accent-gold: #c5a880; 
+            --accent-olive: #242c22; 
+            --border-refined: rgba(197, 168, 128, 0.2); 
         }
 
         * {
@@ -90,14 +90,7 @@
             letter-spacing: 4px;
         }
 
-        .clearance-badge {
-            border: 1px solid var(--accent-gold);
-            padding: 8px 15px;
-            color: var(--accent-gold);
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            background: rgba(197, 168, 128, 0.05);
-        }
+
 
         /* MANIFESTO / STATEMENT */
         .statement-section {
@@ -284,19 +277,17 @@
         <header>
             <div class="identity">
                 <h1>Rubén Darío Higuita</h1>
-                <h2>Systems Engineer · Mission Critical Software</h2>
+                <h2>Systems Engineer · Low-Level & Embedded Software (en formación)</h2>
             </div>
-            <div class="clearance-badge mono">
-                CLEARANCE: LEVEL 0
-            </div>
+
         </header>
 
         <!-- STATEMENT -->
         <section class="statement-section">
             <div class="statement-line"></div>
             <div class="statement-text">
-                Ingeniería en la intersección del <span>ultra lujo</span> automotriz y la precisión táctica de la <span>industria de defensa</span>.<br><br>
-                Mi filosofía de desarrollo rechaza la mediocridad. Forjado en la reparación de motores de élite y perfeccionado en los sistemas <i>low-level</i> de 42 Madrid, construyo software bajo una premisa inquebrantable: <span>Tolerancia Cero a fallos</span>, gestión de memoria absoluta y un diseño arquitectónico tan elegante y limpio como la maquinaria más exclusiva del mundo.
+                Ingeniería que combina una década de experiencia electromecánica de alto rendimiento con desarrollo de software de bajo nivel en <span>C/C++</span> y <span>POSIX</span>.<br><br>
+                Formado en el diagnóstico de fallos mecánicos bajo tolerancias extremas, aplico la misma disciplina al software: <span>gestión de memoria determinista</span>, cero condiciones de carrera, código auditable de principio a fin.
             </div>
         </section>
 
@@ -306,15 +297,15 @@
             <div class="principles-grid">
                 <div class="principle">
                     <h4><i class="fas fa-shield-alt" style="margin-right: 8px;"></i> Zero-Leak Architecture</h4>
-                    <p>Precisión militar en la gestión de recursos. Todo byte reservado y todo socket abierto es rastreado y liberado de forma determinista. Software blindado mediante pruebas exhaustivas con Valgrind y Address Sanitizer.</p>
+                    <p>Todo byte reservado y todo socket abierto se rastrea y libera de forma determinista, verificado con Valgrind y sanitizers en cada build.</p>
                 </div>
                 <div class="principle">
                     <h4><i class="fas fa-microchip" style="margin-right: 8px;"></i> Tactical Concurrency</h4>
-                    <p>Dominio de la programación multihilo y sincronización de procesos POSIX. Prevención matemática de <i>data races</i> y <i>deadlocks</i> en entornos donde un milisegundo de retraso es inaceptable.</p>
+                    <p>Programación multihilo y sincronización POSIX, con prevención verificable de <i>data races</i> y <i>deadlocks</i>.</p>
                 </div>
                 <div class="principle">
                     <h4><i class="fas fa-gem" style="margin-right: 8px;"></i> Minimalist Elegance</h4>
-                    <p>El lujo reside en lo que no se ve. Código C/C++ depurado hasta su esencia más pura. Diseño modular, <i>Separation of Concerns</i> y flujos de Integración Continua (CI/CD) que operan en silencio y con absoluta fiabilidad.</p>
+                    <p>Código C/C++ depurado a su esencia: modular, con separación de responsabilidades y CI/CD que corre en cada push, no solo en la descripción.</p>
                 </div>
             </div>
         </section>
@@ -336,16 +327,16 @@
                     <a href="https://github.com/higrub89/webserv" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                 </div>
 
-                <!-- CAN Gateway -->
+                <!-- Inception -->
                 <div class="project-card">
-                    <h4>CAN-FD Tactical Gateway</h4>
-                    <p class="project-desc">Infraestructura de software para redes vehiculares de automoción de ultra lujo y vehículos blindados. Procesamiento determinista de señales telemétricas a través del estándar CAN Bus.</p>
+                    <h4>Inception</h4>
+                    <p class="project-desc">Stack de microservicios contenerizado. NGINX con terminación TLSv1.3, WordPress y MariaDB en red bridge aislada. Suite de seguridad CI automatizada con GitHub Actions.</p>
                     <div class="project-specs">
-                        <span class="spec">EMBEDDED C</span>
-                        <span class="spec">CAN BUS</span>
-                        <span class="spec">DETERMINISTIC</span>
+                        <span class="spec">DOCKER</span>
+                        <span class="spec">NGINX</span>
+                        <span class="spec">TLSv1.3</span>
                     </div>
-                    <a href="https://github.com/higrub89/canfd-gateway-h7" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/higrub89/inception" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                 </div>
 
                 <!-- Minishell -->
@@ -378,12 +369,12 @@
         <!-- FOOTER -->
         <footer>
             <div class="mono" style="color: var(--text-secondary); font-size: 0.8rem;">
-                STATUS: SECURE &nbsp;|&nbsp; LOCATION: MADRID &nbsp;|&nbsp; 42 NETWORK
+                LOCATION: MADRID &nbsp;|&nbsp; 42 NETWORK
             </div>
             <div class="social-links">
                 <a href="https://github.com/higrub89" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/higrub89" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:tu-email@ejemplo.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:higuitaruben@hotmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </footer>
     </div>
