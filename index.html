@@ -289,20 +289,56 @@
             font-size: 1.4rem;
         }
 
-        .ci-live-badge {
+        .ci-telemetry {
             display: inline-flex;
             align-items: center;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            gap: 8px;
+            padding: 5px 12px;
+            background: rgba(16, 18, 16, 0.85);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            border-radius: 2px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .ci-live-badge:hover {
-            transform: scale(1.04);
-            opacity: 0.9;
+        .ci-telemetry:hover {
+            border-color: var(--accent-gold);
+            background: rgba(197, 168, 128, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .ci-live-badge img {
-            height: 20px;
-            vertical-align: middle;
+        .telemetry-beacon {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            box-shadow: 0 0 8px rgba(197, 168, 128, 0.8);
+            animation: pulse-dot 2.5s infinite ease-in-out;
+        }
+
+        .telemetry-text {
+            font-size: 0.68rem;
+            color: var(--accent-gold);
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+        }
+
+        .ci-telemetry:hover .telemetry-text {
+            color: #ffffff;
+        }
+
+        .telemetry-icon {
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .ci-telemetry:hover .telemetry-icon {
+            color: var(--accent-gold);
+            opacity: 1;
+            transform: translate(1px, -1px);
         }
 
         .project-desc {
@@ -574,8 +610,10 @@
                 <div class="project-card">
                     <div class="card-header">
                         <h4>Webserv</h4>
-                        <a href="https://github.com/higrub89/webserv/actions/workflows/ci.yml" target="_blank" class="ci-live-badge" title="Live GitHub Actions CI Pipeline">
-                            <img src="https://github.com/higrub89/webserv/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+                        <a href="https://github.com/higrub89/webserv/actions/workflows/ci.yml" target="_blank" class="ci-telemetry" title="Automated GitHub Actions CI Suite Verified">
+                            <span class="telemetry-beacon"></span>
+                            <span class="mono telemetry-text">CI VERIFIED</span>
+                            <i class="fas fa-arrow-up-right-from-square telemetry-icon"></i>
                         </a>
                     </div>
                     <p class="project-desc">Servidor HTTP/1.1 asíncrono y determinista escrito en C++98 canónico. Implementa multiplexación I/O avanzada (<span class="mono">epoll/select</span>) de alto rendimiento desde cero. Diseñado bajo el estándar POSIX sin bloqueos de red ni fugas de descriptores.</p>
@@ -594,8 +632,10 @@
                 <div class="project-card">
                     <div class="card-header">
                         <h4>Inception</h4>
-                        <a href="https://github.com/higrub89/inception/actions/workflows/ci.yml" target="_blank" class="ci-live-badge" title="Live GitHub Actions CI Pipeline">
-                            <img src="https://github.com/higrub89/inception/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+                        <a href="https://github.com/higrub89/inception/actions/workflows/ci.yml" target="_blank" class="ci-telemetry" title="Automated GitHub Actions CI Suite Verified">
+                            <span class="telemetry-beacon"></span>
+                            <span class="mono telemetry-text">CI VERIFIED</span>
+                            <i class="fas fa-arrow-up-right-from-square telemetry-icon"></i>
                         </a>
                     </div>
                     <p class="project-desc">Infraestructura contenerizada multicapa para entornos de producción. NGINX con terminación estricta TLSv1.3, WordPress-FPM y MariaDB orquestados sobre redes bridge aisladas y gestión de secretos en memoria.</p>
@@ -614,8 +654,10 @@
                 <div class="project-card">
                     <div class="card-header">
                         <h4>Minishell POSIX</h4>
-                        <a href="https://github.com/higrub89/minishell/actions/workflows/ci.yml" target="_blank" class="ci-live-badge" title="Live GitHub Actions CI Pipeline">
-                            <img src="https://github.com/higrub89/minishell/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+                        <a href="https://github.com/higrub89/minishell/actions/workflows/ci.yml" target="_blank" class="ci-telemetry" title="Automated GitHub Actions CI Suite Verified">
+                            <span class="telemetry-beacon"></span>
+                            <span class="mono telemetry-text">CI VERIFIED</span>
+                            <i class="fas fa-arrow-up-right-from-square telemetry-icon"></i>
                         </a>
                     </div>
                     <p class="project-desc">Intérprete de comandos UNIX escrito en C. Analizador sintáctico basado en árboles AST, comunicación entre procesos mediante <i>Pipes</i>, control exhaustivo de señales y gestión rigurosa de la tabla de descriptores de archivo.</p>
@@ -634,8 +676,10 @@
                 <div class="project-card">
                     <div class="card-header">
                         <h4>Philosophers</h4>
-                        <a href="https://github.com/higrub89/philosophers/actions/workflows/ci.yml" target="_blank" class="ci-live-badge" title="Live GitHub Actions CI Pipeline">
-                            <img src="https://github.com/higrub89/philosophers/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+                        <a href="https://github.com/higrub89/philosophers/actions/workflows/ci.yml" target="_blank" class="ci-telemetry" title="Automated GitHub Actions CI Suite Verified">
+                            <span class="telemetry-beacon"></span>
+                            <span class="mono telemetry-text">CI VERIFIED</span>
+                            <i class="fas fa-arrow-up-right-from-square telemetry-icon"></i>
                         </a>
                     </div>
                     <p class="project-desc">Resolución del problema de la concurrencia distribuida y sincronización de hilos POSIX. Prevención matemática de deadlocks y starvation con mutexes finos, auditado bajo ThreadSanitizer y Helgrind.</p>
